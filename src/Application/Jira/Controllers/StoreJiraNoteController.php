@@ -19,7 +19,7 @@ class StoreJiraNoteController
         $note = $action->execute(
             $request->user(),
             $jiraIssue,
-            $request->validated('content')
+            $request->validated('note')
         );
 
         return response()->json([

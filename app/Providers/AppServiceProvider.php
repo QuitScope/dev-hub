@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use Application\Jira\Policies\JiraNotePolicy;
+use Domain\Models\JiraNote;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +22,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        Gate::policy(JiraNote::class, JiraNotePolicy::class);
     }
 }

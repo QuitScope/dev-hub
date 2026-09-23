@@ -13,7 +13,7 @@ Gebaut mit **Laravel 12** und einer Domain-Driven-Design-Struktur.
 | --- |
 | ![Jira](docs/screenshots/jira.jpg) |
 
-> Die Screenshots zeigen das zugehörige Next.js-Frontend, das diese API nutzt.
+> Die Screenshots zeigen das zugehörige Next.js-Frontend: [dev-hub-frontend](https://github.com/QuitScope/dev-hub-frontend).
 
 ---
 
