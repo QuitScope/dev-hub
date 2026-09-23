@@ -3,6 +3,8 @@
 REST-API für ein persönliches Developer-Dashboard: Code-Snippets, Todos, Bug-Tracking, Jira-Anbindung und Analytics an einem Ort.
 Gebaut mit **Laravel 12** und einer Domain-Driven-Design-Struktur.
 
+**Frontend:** [QuitScope/dev-hub-frontend](https://github.com/QuitScope/dev-hub-frontend) (Next.js 15, React 19, TypeScript)
+
 ![Dashboard](docs/screenshots/dashboard.jpg)
 
 | Code-Snippets | Bug-Tracking |
