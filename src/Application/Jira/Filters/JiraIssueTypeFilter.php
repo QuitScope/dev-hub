@@ -1,0 +1,14 @@
+<?php
+
+namespace Application\Jira\Filters;
+
+use Illuminate\Database\Eloquent\Builder;
+use Spatie\QueryBuilder\Filters\Filter;
+
+class JiraIssueTypeFilter implements Filter
+{
+    public function __invoke(Builder $query, mixed $value, string $property): Builder
+    {
+        return $query->where('issue_type', $value);
+    }
+}

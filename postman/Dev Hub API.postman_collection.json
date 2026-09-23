@@ -1,0 +1,1066 @@
+{
+	"info": {
+		"_postman_id": "bfcdd2f8-d8d1-4e0c-af71-862e1f3d630f",
+		"name": "Dev Hub API",
+		"description": "Requests for the Dev Hub API. Set the `baseURL` variable and log in to populate `bearerToken`.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Snippets",
+			"item": [
+				{
+					"name": "LIST Snippets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "accept-language",
+								"value": "de-DE,de;q=0.6"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "origin",
+								"value": "http://localhost:5173"
+							},
+							{
+								"key": "priority",
+								"value": "u=1, i"
+							},
+							{
+								"key": "referer",
+								"value": "http://localhost:5173/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Not;A=Brand\";v=\"99\", \"Brave\";v=\"139\", \"Chromium\";v=\"139\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "cross-site"
+							},
+							{
+								"key": "sec-gpc",
+								"value": "1"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+							},
+							{
+								"key": "x-requested-with",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/snippets",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"snippets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Snippet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "accept-language",
+								"value": "de-DE,de;q=0.6"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "origin",
+								"value": "http://localhost:5173"
+							},
+							{
+								"key": "priority",
+								"value": "u=1, i"
+							},
+							{
+								"key": "referer",
+								"value": "http://localhost:5173/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Not;A=Brand\";v=\"99\", \"Brave\";v=\"139\", \"Chromium\";v=\"139\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "cross-site"
+							},
+							{
+								"key": "sec-gpc",
+								"value": "1"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+							},
+							{
+								"key": "x-requested-with",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"testen\",\r\n    \"is_done\": false\r\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/snippets",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"snippets"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Todos",
+			"item": [
+				{
+					"name": "LIST TODOS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "accept-language",
+								"value": "de-DE,de;q=0.6"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "origin",
+								"value": "http://localhost:5173"
+							},
+							{
+								"key": "priority",
+								"value": "u=1, i"
+							},
+							{
+								"key": "referer",
+								"value": "http://localhost:5173/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Not;A=Brand\";v=\"99\", \"Brave\";v=\"139\", \"Chromium\";v=\"139\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "cross-site"
+							},
+							{
+								"key": "sec-gpc",
+								"value": "1"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+							},
+							{
+								"key": "x-requested-with",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/todos",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Todo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "accept-language",
+								"value": "de-DE,de;q=0.6"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "origin",
+								"value": "http://localhost:5173"
+							},
+							{
+								"key": "priority",
+								"value": "u=1, i"
+							},
+							{
+								"key": "referer",
+								"value": "http://localhost:5173/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Not;A=Brand\";v=\"99\", \"Brave\";v=\"139\", \"Chromium\";v=\"139\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "cross-site"
+							},
+							{
+								"key": "sec-gpc",
+								"value": "1"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+							},
+							{
+								"key": "x-requested-with",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"testen\",\r\n    \"is_done\": false\r\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/todos",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Todo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "accept-language",
+								"value": "de-DE,de;q=0.6"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer {{bearerToken}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "origin",
+								"value": "http://localhost:5173"
+							},
+							{
+								"key": "priority",
+								"value": "u=1, i"
+							},
+							{
+								"key": "referer",
+								"value": "http://localhost:5173/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Not;A=Brand\";v=\"99\", \"Brave\";v=\"139\", \"Chromium\";v=\"139\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "cross-site"
+							},
+							{
+								"key": "sec-gpc",
+								"value": "1"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+							},
+							{
+								"key": "x-requested-with",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Cool\",\r\n    \"description\": \"tolle beschreibung\",\r\n    \"category\": \"Work\",\r\n    \"priority\": \"Low\",\r\n    \"status\": \"Todo\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/todos/39f8ea03-f85e-4a36-8767-31eb1e3d3617",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"todos",
+								"39f8ea03-f85e-4a36-8767-31eb1e3d3617"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jira",
+			"item": [
+				{
+					"name": "List Jira Issues",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/v1/jira-issues?filter[search]=&filter[status]=&filter[priority]=&sort=-jira_updated_at&limit=20",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"jira-issues"
+							],
+							"query": [
+								{
+									"key": "filter[search]",
+									"value": "",
+									"description": "Search in summary, description, or jira_key"
+								},
+								{
+									"key": "filter[status]",
+									"value": "",
+									"description": "Filter by status (To Do, In Progress, Done, etc.)"
+								},
+								{
+									"key": "filter[priority]",
+									"value": "",
+									"description": "Filter by priority (Highest, High, Medium, Low, Lowest)"
+								},
+								{
+									"key": "sort",
+									"value": "-jira_updated_at",
+									"description": "Sort field (created_at, priority, status, jira_updated_at)"
+								},
+								{
+									"key": "limit",
+									"value": "20",
+									"description": "Items per page"
+								}
+							]
+						},
+						"description": "List all Jira issues with filtering and sorting options"
+					},
+					"response": []
+				},
+				{
+					"name": "Show Jira Issue",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/v1/jira-issues/:id?include=notes,snippets,todos",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"jira-issues",
+								":id"
+							],
+							"query": [
+								{
+									"key": "include",
+									"value": "notes,snippets,todos",
+									"description": "Include relationships (notes, snippets, todos)"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "Jira Issue UUID"
+								}
+							]
+						},
+						"description": "Get a single Jira issue by ID with optional relationships"
+					},
+					"response": []
+				},
+				{
+					"name": "Sync Jira Issues",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"force\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/jira-issues/sync",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"jira-issues",
+								"sync"
+							]
+						},
+						"description": "Manually trigger synchronization of Jira issues from Jira API"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Jira Note",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"jira_issue_id\": \"9d1e8f7a-5b3c-4d2e-1f0a-6b8c9d7e5f4a\",\n\t\"note\": \"This is a personal note about the issue\",\n\t\"is_pinned\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/jira-notes",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"jira-notes"
+							]
+						},
+						"description": "Create a personal note for a Jira issue"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Jira Note",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"note\": \"Updated note content\",\n\t\"is_pinned\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/jira-notes/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"jira-notes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "Jira Note UUID"
+								}
+							]
+						},
+						"description": "Update an existing Jira note"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Jira Note",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/v1/jira-notes/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"jira-notes",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "Jira Note UUID"
+								}
+							]
+						},
+						"description": "Delete a Jira note"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Jira Settings",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/v1/jira-settings",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"jira-settings"
+							]
+						},
+						"description": "Get current user's Jira integration settings"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Jira Settings",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"base_url\": \"https://your-company.atlassian.net\",\n\t\"username\": \"your-email@example.com\",\n\t\"api_token\": \"your-jira-api-token\",\n\t\"project_key\": \"PROJ\",\n\t\"sync_enabled\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/jira-settings",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"jira-settings"
+							]
+						},
+						"description": "Update Jira integration settings for the current user"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearerToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "accept-language",
+						"value": "de-DE,de;q=0.6"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer {{bearerToken}}"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "origin",
+						"value": "http://localhost:5173"
+					},
+					{
+						"key": "priority",
+						"value": "u=1, i"
+					},
+					{
+						"key": "referer",
+						"value": "http://localhost:5173/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not;A=Brand\";v=\"99\", \"Brave\";v=\"139\", \"Chromium\";v=\"139\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "cross-site"
+					},
+					{
+						"key": "sec-gpc",
+						"value": "1"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "x-requested-with",
+						"value": "XMLHttpRequest"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseURL}}/v2/status",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"v2",
+						"status"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Extract and save bearer token from response\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.property('token');",
+							"    var token = jsonData.token;",
+							"    pm.environment.set('bearerToken' + token);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"greenholt.lonzo@example.org\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/auth/login",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"test@example.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/register",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"register"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{bearerToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
